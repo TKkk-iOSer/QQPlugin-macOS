@@ -1,0 +1,600 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		28E76C707D05B519FEBBAD83 /* libPods-QQPlugin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDF6A4B0BE7FF48B46901D87 /* libPods-QQPlugin.a */; };
+		528DA5D6205F80780063E2FC /* QQPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 528DA5D4205F80780063E2FC /* QQPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		528DA5DF205F80870063E2FC /* QQ+hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 528DA5DD205F80870063E2FC /* QQ+hook.m */; };
+		528DA5E0205F80870063E2FC /* QQ+hook.h in Headers */ = {isa = PBXBuildFile; fileRef = 528DA5DE205F80870063E2FC /* QQ+hook.h */; };
+		528DA5EA205F809C0063E2FC /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 528DA5E9205F809C0063E2FC /* main.mm */; };
+		528DA5EC205F81C40063E2FC /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = 528DA5E7205F80900063E2FC /* fishhook.c */; };
+		528DA5F0205F82430063E2FC /* TKQQPluginConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 528DA5EE205F82430063E2FC /* TKQQPluginConfig.h */; };
+		528DA5F1205F82430063E2FC /* TKQQPluginConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 528DA5EF205F82430063E2FC /* TKQQPluginConfig.m */; };
+		528DA5FB206003CD0063E2FC /* TKHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 528DA5F3206003CC0063E2FC /* TKHelper.h */; };
+		528DA5FF206003CD0063E2FC /* TKHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 528DA5F7206003CC0063E2FC /* TKHelper.m */; };
+		529F91DC206BCF680026430E /* TKWebServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 529F91DA206BCF680026430E /* TKWebServerManager.m */; };
+		529F91DD206BCF680026430E /* TKWebServerManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 529F91DB206BCF680026430E /* TKWebServerManager.h */; };
+		529F91E0206BF0550026430E /* TKMsgManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 529F91DE206BF0550026430E /* TKMsgManager.h */; };
+		529F91E1206BF0550026430E /* TKMsgManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 529F91DF206BF0550026430E /* TKMsgManager.m */; };
+		52E3A45F206AABF00048C592 /* TKAutoReplyModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 52E3A45D206AABF00048C592 /* TKAutoReplyModel.h */; };
+		52E3A460206AABF00048C592 /* TKAutoReplyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E3A45E206AABF00048C592 /* TKAutoReplyModel.m */; };
+		52E3A463206AABFB0048C592 /* TKBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E3A461206AABFA0048C592 /* TKBaseModel.m */; };
+		52E3A464206AABFB0048C592 /* TKBaseModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 52E3A462206AABFA0048C592 /* TKBaseModel.h */; };
+		52E3A46E206AACDF0048C592 /* TKAutoReplyWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 52E3A467206AACDF0048C592 /* TKAutoReplyWindowController.h */; };
+		52E3A46F206AACDF0048C592 /* TKAutoReplyWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52E3A468206AACDF0048C592 /* TKAutoReplyWindowController.xib */; };
+		52E3A470206AACDF0048C592 /* TKAutoReplyWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E3A469206AACDF0048C592 /* TKAutoReplyWindowController.m */; };
+		52E3A47D206AAD020048C592 /* TKAutoReplyContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E3A476206AAD020048C592 /* TKAutoReplyContentView.m */; };
+		52E3A47E206AAD020048C592 /* TKAutoReplyCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 52E3A477206AAD020048C592 /* TKAutoReplyCell.h */; };
+		52E3A47F206AAD020048C592 /* TKAutoReplyContentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 52E3A478206AAD020048C592 /* TKAutoReplyContentView.h */; };
+		52E3A480206AAD020048C592 /* TKAutoReplyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E3A479206AAD020048C592 /* TKAutoReplyCell.m */; };
+		52E3A48D206AAD390048C592 /* NSButton+Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E3A485206AAD390048C592 /* NSButton+Action.m */; };
+		52E3A48E206AAD390048C592 /* NSTextField+Action.h in Headers */ = {isa = PBXBuildFile; fileRef = 52E3A486206AAD390048C592 /* NSTextField+Action.h */; };
+		52E3A48F206AAD390048C592 /* NSView+Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E3A487206AAD390048C592 /* NSView+Action.m */; };
+		52E3A490206AAD390048C592 /* NSButton+Action.h in Headers */ = {isa = PBXBuildFile; fileRef = 52E3A488206AAD390048C592 /* NSButton+Action.h */; };
+		52E3A491206AAD390048C592 /* NSView+Action.h in Headers */ = {isa = PBXBuildFile; fileRef = 52E3A489206AAD390048C592 /* NSView+Action.h */; };
+		52E3A492206AAD390048C592 /* NSTextField+Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E3A48A206AAD390048C592 /* NSTextField+Action.m */; };
+		52E3A493206AAD390048C592 /* Color.h in Headers */ = {isa = PBXBuildFile; fileRef = 52E3A48B206AAD390048C592 /* Color.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		39FA9A25B25855D7E65B80C4 /* Pods-QQPlugin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QQPlugin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QQPlugin/Pods-QQPlugin.debug.xcconfig"; sourceTree = "<group>"; };
+		4AB8D9FD2365E53D0213EE80 /* Pods-QQPlugin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QQPlugin.release.xcconfig"; path = "Pods/Target Support Files/Pods-QQPlugin/Pods-QQPlugin.release.xcconfig"; sourceTree = "<group>"; };
+		528DA5D1205F80780063E2FC /* QQPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QQPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		528DA5D4205F80780063E2FC /* QQPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QQPlugin.h; sourceTree = "<group>"; };
+		528DA5D5205F80780063E2FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		528DA5DD205F80870063E2FC /* QQ+hook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "QQ+hook.m"; sourceTree = "<group>"; };
+		528DA5DE205F80870063E2FC /* QQ+hook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QQ+hook.h"; sourceTree = "<group>"; };
+		528DA5E7205F80900063E2FC /* fishhook.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fishhook.c; sourceTree = "<group>"; };
+		528DA5E8205F80900063E2FC /* fishhook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
+		528DA5E9205F809C0063E2FC /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		528DA5EE205F82430063E2FC /* TKQQPluginConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKQQPluginConfig.h; sourceTree = "<group>"; };
+		528DA5EF205F82430063E2FC /* TKQQPluginConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKQQPluginConfig.m; sourceTree = "<group>"; };
+		528DA5F3206003CC0063E2FC /* TKHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKHelper.h; sourceTree = "<group>"; };
+		528DA5F7206003CC0063E2FC /* TKHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKHelper.m; sourceTree = "<group>"; };
+		529F91DA206BCF680026430E /* TKWebServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKWebServerManager.m; sourceTree = "<group>"; };
+		529F91DB206BCF680026430E /* TKWebServerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKWebServerManager.h; sourceTree = "<group>"; };
+		529F91DE206BF0550026430E /* TKMsgManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKMsgManager.h; sourceTree = "<group>"; };
+		529F91DF206BF0550026430E /* TKMsgManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKMsgManager.m; sourceTree = "<group>"; };
+		52E3A45D206AABF00048C592 /* TKAutoReplyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKAutoReplyModel.h; sourceTree = "<group>"; };
+		52E3A45E206AABF00048C592 /* TKAutoReplyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKAutoReplyModel.m; sourceTree = "<group>"; };
+		52E3A461206AABFA0048C592 /* TKBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKBaseModel.m; sourceTree = "<group>"; };
+		52E3A462206AABFA0048C592 /* TKBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKBaseModel.h; sourceTree = "<group>"; };
+		52E3A467206AACDF0048C592 /* TKAutoReplyWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKAutoReplyWindowController.h; sourceTree = "<group>"; };
+		52E3A468206AACDF0048C592 /* TKAutoReplyWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TKAutoReplyWindowController.xib; sourceTree = "<group>"; };
+		52E3A469206AACDF0048C592 /* TKAutoReplyWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKAutoReplyWindowController.m; sourceTree = "<group>"; };
+		52E3A476206AAD020048C592 /* TKAutoReplyContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKAutoReplyContentView.m; sourceTree = "<group>"; };
+		52E3A477206AAD020048C592 /* TKAutoReplyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKAutoReplyCell.h; sourceTree = "<group>"; };
+		52E3A478206AAD020048C592 /* TKAutoReplyContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKAutoReplyContentView.h; sourceTree = "<group>"; };
+		52E3A479206AAD020048C592 /* TKAutoReplyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKAutoReplyCell.m; sourceTree = "<group>"; };
+		52E3A485206AAD390048C592 /* NSButton+Action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSButton+Action.m"; sourceTree = "<group>"; };
+		52E3A486206AAD390048C592 /* NSTextField+Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTextField+Action.h"; sourceTree = "<group>"; };
+		52E3A487206AAD390048C592 /* NSView+Action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+Action.m"; sourceTree = "<group>"; };
+		52E3A488206AAD390048C592 /* NSButton+Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSButton+Action.h"; sourceTree = "<group>"; };
+		52E3A489206AAD390048C592 /* NSView+Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+Action.h"; sourceTree = "<group>"; };
+		52E3A48A206AAD390048C592 /* NSTextField+Action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTextField+Action.m"; sourceTree = "<group>"; };
+		52E3A48B206AAD390048C592 /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
+		DDF6A4B0BE7FF48B46901D87 /* libPods-QQPlugin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QQPlugin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		528DA5CD205F80780063E2FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28E76C707D05B519FEBBAD83 /* libPods-QQPlugin.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		528DA5C7205F80780063E2FC = {
+			isa = PBXGroup;
+			children = (
+				528DA5D3205F80780063E2FC /* QQPlugin */,
+				528DA5D2205F80780063E2FC /* Products */,
+				DDF10C314AE4CC5029B49606 /* Pods */,
+				966DFD8FE1117A663093B76F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		528DA5D2205F80780063E2FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				528DA5D1205F80780063E2FC /* QQPlugin.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		528DA5D3205F80780063E2FC /* QQPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				52E3A483206AAD390048C592 /* Common */,
+				52E3A474206AAD020048C592 /* Views */,
+				52E3A465206AACDF0048C592 /* WindowControllers */,
+				52E3A45C206AABD90048C592 /* Model */,
+				528DA5F2206003CC0063E2FC /* Utils */,
+				528DA5ED205F822B0063E2FC /* Config */,
+				528DA5E6205F80900063E2FC /* Vendor */,
+				528DA5DC205F80870063E2FC /* Category */,
+				528DA5D4205F80780063E2FC /* QQPlugin.h */,
+				528DA5E9205F809C0063E2FC /* main.mm */,
+				528DA5D5205F80780063E2FC /* Info.plist */,
+			);
+			path = QQPlugin;
+			sourceTree = "<group>";
+		};
+		528DA5DC205F80870063E2FC /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				528DA5DE205F80870063E2FC /* QQ+hook.h */,
+				528DA5DD205F80870063E2FC /* QQ+hook.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		528DA5E6205F80900063E2FC /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				528DA5E7205F80900063E2FC /* fishhook.c */,
+				528DA5E8205F80900063E2FC /* fishhook.h */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		528DA5ED205F822B0063E2FC /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				528DA5EE205F82430063E2FC /* TKQQPluginConfig.h */,
+				528DA5EF205F82430063E2FC /* TKQQPluginConfig.m */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		528DA5F2206003CC0063E2FC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				528DA5F3206003CC0063E2FC /* TKHelper.h */,
+				528DA5F7206003CC0063E2FC /* TKHelper.m */,
+				529F91DB206BCF680026430E /* TKWebServerManager.h */,
+				529F91DA206BCF680026430E /* TKWebServerManager.m */,
+				529F91DE206BF0550026430E /* TKMsgManager.h */,
+				529F91DF206BF0550026430E /* TKMsgManager.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		52E3A45C206AABD90048C592 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				52E3A462206AABFA0048C592 /* TKBaseModel.h */,
+				52E3A461206AABFA0048C592 /* TKBaseModel.m */,
+				52E3A45D206AABF00048C592 /* TKAutoReplyModel.h */,
+				52E3A45E206AABF00048C592 /* TKAutoReplyModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		52E3A465206AACDF0048C592 /* WindowControllers */ = {
+			isa = PBXGroup;
+			children = (
+				52E3A466206AACDF0048C592 /* AutoReply */,
+			);
+			path = WindowControllers;
+			sourceTree = "<group>";
+		};
+		52E3A466206AACDF0048C592 /* AutoReply */ = {
+			isa = PBXGroup;
+			children = (
+				52E3A467206AACDF0048C592 /* TKAutoReplyWindowController.h */,
+				52E3A468206AACDF0048C592 /* TKAutoReplyWindowController.xib */,
+				52E3A469206AACDF0048C592 /* TKAutoReplyWindowController.m */,
+			);
+			path = AutoReply;
+			sourceTree = "<group>";
+		};
+		52E3A474206AAD020048C592 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				52E3A475206AAD020048C592 /* AutoReply */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		52E3A475206AAD020048C592 /* AutoReply */ = {
+			isa = PBXGroup;
+			children = (
+				52E3A478206AAD020048C592 /* TKAutoReplyContentView.h */,
+				52E3A476206AAD020048C592 /* TKAutoReplyContentView.m */,
+				52E3A477206AAD020048C592 /* TKAutoReplyCell.h */,
+				52E3A479206AAD020048C592 /* TKAutoReplyCell.m */,
+			);
+			path = AutoReply;
+			sourceTree = "<group>";
+		};
+		52E3A483206AAD390048C592 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				52E3A484206AAD390048C592 /* Category */,
+				52E3A48B206AAD390048C592 /* Color.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		52E3A484206AAD390048C592 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				52E3A489206AAD390048C592 /* NSView+Action.h */,
+				52E3A487206AAD390048C592 /* NSView+Action.m */,
+				52E3A488206AAD390048C592 /* NSButton+Action.h */,
+				52E3A485206AAD390048C592 /* NSButton+Action.m */,
+				52E3A486206AAD390048C592 /* NSTextField+Action.h */,
+				52E3A48A206AAD390048C592 /* NSTextField+Action.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		966DFD8FE1117A663093B76F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DDF6A4B0BE7FF48B46901D87 /* libPods-QQPlugin.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DDF10C314AE4CC5029B49606 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				39FA9A25B25855D7E65B80C4 /* Pods-QQPlugin.debug.xcconfig */,
+				4AB8D9FD2365E53D0213EE80 /* Pods-QQPlugin.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		528DA5CE205F80780063E2FC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				529F91E0206BF0550026430E /* TKMsgManager.h in Headers */,
+				52E3A493206AAD390048C592 /* Color.h in Headers */,
+				528DA5D6205F80780063E2FC /* QQPlugin.h in Headers */,
+				52E3A464206AABFB0048C592 /* TKBaseModel.h in Headers */,
+				52E3A47E206AAD020048C592 /* TKAutoReplyCell.h in Headers */,
+				52E3A491206AAD390048C592 /* NSView+Action.h in Headers */,
+				52E3A46E206AACDF0048C592 /* TKAutoReplyWindowController.h in Headers */,
+				52E3A490206AAD390048C592 /* NSButton+Action.h in Headers */,
+				528DA5F0205F82430063E2FC /* TKQQPluginConfig.h in Headers */,
+				52E3A47F206AAD020048C592 /* TKAutoReplyContentView.h in Headers */,
+				52E3A48E206AAD390048C592 /* NSTextField+Action.h in Headers */,
+				528DA5E0205F80870063E2FC /* QQ+hook.h in Headers */,
+				529F91DD206BCF680026430E /* TKWebServerManager.h in Headers */,
+				528DA5FB206003CD0063E2FC /* TKHelper.h in Headers */,
+				52E3A45F206AABF00048C592 /* TKAutoReplyModel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		528DA5D0205F80780063E2FC /* QQPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 528DA5D9205F80780063E2FC /* Build configuration list for PBXNativeTarget "QQPlugin" */;
+			buildPhases = (
+				80C03CC5B74D0C269D12D74D /* [CP] Check Pods Manifest.lock */,
+				528DA5CC205F80780063E2FC /* Sources */,
+				528DA5CD205F80780063E2FC /* Frameworks */,
+				528DA5CE205F80780063E2FC /* Headers */,
+				528DA5CF205F80780063E2FC /* Resources */,
+				528DA5EB205F80A80063E2FC /* ShellScript */,
+				63D97667867417522A277859 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QQPlugin;
+			productName = QQPlugin;
+			productReference = 528DA5D1205F80780063E2FC /* QQPlugin.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		528DA5C8205F80780063E2FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = TK;
+				TargetAttributes = {
+					528DA5D0205F80780063E2FC = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 528DA5CB205F80780063E2FC /* Build configuration list for PBXProject "QQPlugin" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 528DA5C7205F80780063E2FC;
+			productRefGroup = 528DA5D2205F80780063E2FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				528DA5D0205F80780063E2FC /* QQPlugin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		528DA5CF205F80780063E2FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52E3A46F206AACDF0048C592 /* TKAutoReplyWindowController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		528DA5EB205F80A80063E2FC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\napp_name=\"QQ\"\nframework_name=\"QQPlugin\"\napp_bundle_path=\"/Applications/${app_name}.app/Contents/MacOS\"\napp_executable_path=\"${app_bundle_path}/${app_name}\"\napp_executable_backup_path=\"${app_executable_path}_backup\"\nframework_path=\"${app_bundle_path}/${framework_name}.framework\"\n# 备份WeChat原始可执行文件\nif [ ! -f \"$app_executable_backup_path\" ]\nthen\ncp \"$app_executable_path\" \"$app_executable_backup_path\"\nfi\n\nrm -rf \"./Other/Products/Debug/${framework_name}.framework\"\ncp -r \"${BUILT_PRODUCTS_DIR}/${framework_name}.framework\" \"./Other/Products/Debug/${framework_name}.framework\"\ncp -r \"${BUILT_PRODUCTS_DIR}/${framework_name}.framework\" ${app_bundle_path}\n./Other/insert_dylib --all-yes \"${framework_path}/${framework_name}\" \"$app_executable_backup_path\" \"$app_executable_path\"";
+		};
+		63D97667867417522A277859 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QQPlugin/Pods-QQPlugin-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80C03CC5B74D0C269D12D74D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		528DA5CC205F80780063E2FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52E3A480206AAD020048C592 /* TKAutoReplyCell.m in Sources */,
+				52E3A470206AACDF0048C592 /* TKAutoReplyWindowController.m in Sources */,
+				52E3A48D206AAD390048C592 /* NSButton+Action.m in Sources */,
+				52E3A47D206AAD020048C592 /* TKAutoReplyContentView.m in Sources */,
+				52E3A460206AABF00048C592 /* TKAutoReplyModel.m in Sources */,
+				528DA5EC205F81C40063E2FC /* fishhook.c in Sources */,
+				52E3A492206AAD390048C592 /* NSTextField+Action.m in Sources */,
+				529F91DC206BCF680026430E /* TKWebServerManager.m in Sources */,
+				528DA5EA205F809C0063E2FC /* main.mm in Sources */,
+				52E3A463206AABFB0048C592 /* TKBaseModel.m in Sources */,
+				529F91E1206BF0550026430E /* TKMsgManager.m in Sources */,
+				528DA5FF206003CD0063E2FC /* TKHelper.m in Sources */,
+				528DA5DF205F80870063E2FC /* QQ+hook.m in Sources */,
+				52E3A48F206AAD390048C592 /* NSView+Action.m in Sources */,
+				528DA5F1205F82430063E2FC /* TKQQPluginConfig.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		528DA5D7205F80780063E2FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		528DA5D8205F80780063E2FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		528DA5DA205F80780063E2FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39FA9A25B25855D7E65B80C4 /* Pods-QQPlugin.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = QQPlugin/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = tk.QQPlugin;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		528DA5DB205F80780063E2FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AB8D9FD2365E53D0213EE80 /* Pods-QQPlugin.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = QQPlugin/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = tk.QQPlugin;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		528DA5CB205F80780063E2FC /* Build configuration list for PBXProject "QQPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				528DA5D7205F80780063E2FC /* Debug */,
+				528DA5D8205F80780063E2FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		528DA5D9205F80780063E2FC /* Build configuration list for PBXNativeTarget "QQPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				528DA5DA205F80780063E2FC /* Debug */,
+				528DA5DB205F80780063E2FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 528DA5C8205F80780063E2FC /* Project object */;
+}

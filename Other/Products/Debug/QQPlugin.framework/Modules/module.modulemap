@@ -1,0 +1,6 @@
+framework module QQPlugin {
+  umbrella header "QQPlugin.h"
+
+  export *
+  module * { export * }
+}
