@@ -55,6 +55,8 @@ QQ 小助手
 ![自动回复设置.png](./Other/ScreenShots/auto_reply.png)
 
 * Alfred 使用：跟 微信`Alfred`类似，关键字为`q`. 插件在 Other 文件夹中
+![QQ-alfred-workflow](./Other/ScreenShots/alfred_workflow.png)
+
 
 ---
 
