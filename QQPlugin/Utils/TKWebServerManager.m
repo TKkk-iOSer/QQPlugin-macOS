@@ -159,6 +159,10 @@
 }
 
 - (NSDictionary *)dictFromDiscussSearchResult:(Discuss *)discuss searcherInter:(ContactSearcherInter *)inter {
+    if ([discuss.className isEqualToString:@"Group"]) {
+        return [self dictFromGroupSearchResult:(Group *)discuss];
+    }
+    
     NSString *uin = [discuss valueForKey:@"_uinStr"];
     DiscussGroupInfo *discussInfo = discuss.discussInfo;
 

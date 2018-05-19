@@ -2,4 +2,79 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "0"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QQPlugin/Utils/TKWebServerManager.m"
+            timestampString = "548399907.065183"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "-addHandleForSearchUser"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__44-[TKWebServerManager addHandleForSearchUser]_block_invoke"
+                  moduleName = "QQPlugin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tk/Documents/Coding/QQPlugin-macOS/QQPlugin/Utils/TKWebServerManager.m"
+                  timestampString = "548399826.884563"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "678">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__44-[TKWebServerManager addHandleForSearchUser]_block_invoke_2"
+                  moduleName = "QQPlugin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tk/Documents/Coding/QQPlugin-macOS/QQPlugin/Utils/TKWebServerManager.m"
+                  timestampString = "548399826.8889689"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_"
+                  moduleName = "QQPlugin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tk/Documents/Coding/QQPlugin-macOS/QQPlugin/Utils/TKWebServerManager.m"
+                  timestampString = "548399826.8937761"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
