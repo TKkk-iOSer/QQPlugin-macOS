@@ -10,6 +10,7 @@
 #import "NSView+Action.h"
 #import "NSButton+Action.h"
 #import "NSTextField+Action.h"
+#import "NSDate+Action.h"
 #import "Color.h"
 #import <objc/runtime.h>
 
@@ -85,10 +86,17 @@ struct _BHMessageSession {
 @property(retain, nonatomic) NSString *nickname;
 @property(copy, nonatomic) NSString *smallContent;
 @property(retain, nonatomic) NSString *uin;
+@property(readonly) NSString *senderUin;
+@property(copy, nonatomic) NSString *summaryTextContent;
+@property(readonly, nonatomic) NSArray *contentPartArray;
+- (id)senderDisplayName;
+- (int)chatType;
 @end
 
 @interface BHProfileModel : NSObject
 @property(copy, nonatomic) NSString *nick;
+@property(readonly) NSString *displayName;
+@property(copy, nonatomic) NSString *uin;
 @end
 
 @interface BHFriendModel : NSObject
@@ -119,12 +127,19 @@ struct _BHMessageSession {
 @end
 
 #pragma mark - Manager
+@interface QQBaseSingleton : NSObject <NSCopying>
++ (id)sharedInstance;
+@end
+
 @interface BHMsgManager : NSObject
 + (id)sharedInstance;
 - (id)defaultFontInfo;
 - (void)appendReceiveMessageModel:(id)arg1 msgSource:(long long)arg2;
 - (void)addTipsMessage:(id)arg1 sessType:(int)arg2 uin:(id)arg3 option:(id)arg4;
 - (id)sendMessagePacket:(id)arg1 target:(struct _BHMessageSession)arg2 completion:(id)arg3 ProgressBlock:(id)arg4;
+- (id)getImagePathByMsg:(id)arg1 imageSize:(long long)arg2;
+- (id)getShortVideoPathByMsg:(id)arg1;
+- (void)downloadImageByMsg:(id)arg1 content:(id)arg2 completion:(id)arg3 ProgressBlock:(id)arg4;
 @end
 
 @interface MQAIOManager : NSObject
@@ -141,7 +156,7 @@ struct _BHMessageSession {
 @interface BHDiscussGroupManager : NSObject
 + (id)sharedInstance;
 - (id)getDiscussMember:(id)arg1 memberUin:(long long)arg2;
-
+- (id)getGroupInfo:(long long)arg1;
 @end
 
 @interface BHFriendListManager : NSObject
@@ -176,3 +191,55 @@ struct _BHMessageSession {
 - (void)addText:(id)arg1;
 - (id)initWithMessageType:(int)arg1;
 @end
+
+@interface MQRecentSessionManager : NSObject
++ (id)sharedLogicEngine;
+- (id)getSessionIDList;
+@end
+
+@interface GroupFolderManager : NSObject
++ (id)sharedFolderManager;
+- (id)BHGroupModelWithUin:(id)arg1;
+@end
+
+@interface BHProfileManager : NSObject
++ (id)sharedInstance;
+- (id)getProfileWithUIN:(id)arg1;
+@end
+
+@interface MQSessionID : NSObject <NSCopying>
++ (id)sessionIdWithChatType:(int)arg1 andUin:(unsigned long long)arg2;
+@property(readonly, nonatomic) int chatType; // @synthesize
+@property(readonly, nonatomic) unsigned long long uin; // @synthesize uin=_uin;
+- (id)uinString;
+@end
+
+@interface UnreadMsgMgr : NSObject
++ (id)sharedUnreadMsgMgr;
+- (id)getRecentModelFromSessionID:(id)arg1;
+@end
+
+@interface MQRecentMsgTips : NSObject
++ (id)tipsOfContentMsg:(id)arg1 sessionId:(id)arg2;
+@end
+
+@interface TXImageUtils : NSObject
++ (id)imageOfSession:(id)arg1;
+@end
+
+
+@interface TChatHistoryMsgManager : QQBaseSingleton
+- (id)getHistoryMsgModel:(long long)arg1 sessType:(int)arg2 filter:(unsigned long long)arg3;
+@end
+
+
+@interface TChatHistoryMsgModelWrapper : NSObject
+- (void)_loadMoreMessageUpForAllMsgType:(void(^)(void))arg1;
+@property(readonly, nonatomic) NSArray *msgArray;
+@end
+
+@interface VideoMsgLoadManager : NSObject
++ (void)requsetVideoMsgVideo:(id)arg1 completion:(id)arg2;
+@end
+
+

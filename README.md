@@ -11,7 +11,7 @@ QQ 小助手
 
 * 消息自动回复
 * 消息防撤回
-* alfred 快捷发送消息 & 打开窗口 
+* alfred 快捷发送消息 & 打开窗口 & 查看聊天记录
 
 ---
 
@@ -54,7 +54,7 @@ QQ 小助手
 
 ![自动回复设置.png](./Other/ScreenShots/auto_reply.png)
 
-* Alfred 使用：跟 微信`Alfred`类似，关键字为`q`. [QQ-alfred-workflow](https://github.com/TKkk-iOSer/QQ-alfred-workflow)
+* Alfred 使用：跟 微信`Alfred`类似，关键字为`q`. 
 
 ---
 

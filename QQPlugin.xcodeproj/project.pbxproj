@@ -17,6 +17,8 @@
 		528DA5F1205F82430063E2FC /* TKQQPluginConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 528DA5EF205F82430063E2FC /* TKQQPluginConfig.m */; };
 		528DA5FB206003CD0063E2FC /* TKHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 528DA5F3206003CC0063E2FC /* TKHelper.h */; };
 		528DA5FF206003CD0063E2FC /* TKHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 528DA5F7206003CC0063E2FC /* TKHelper.m */; };
+		529184C32126573C00FE4B57 /* NSDate+Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 529184C12126573C00FE4B57 /* NSDate+Action.m */; };
+		529184C42126573C00FE4B57 /* NSDate+Action.h in Headers */ = {isa = PBXBuildFile; fileRef = 529184C22126573C00FE4B57 /* NSDate+Action.h */; };
 		529F91DC206BCF680026430E /* TKWebServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 529F91DA206BCF680026430E /* TKWebServerManager.m */; };
 		529F91DD206BCF680026430E /* TKWebServerManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 529F91DB206BCF680026430E /* TKWebServerManager.h */; };
 		529F91E0206BF0550026430E /* TKMsgManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 529F91DE206BF0550026430E /* TKMsgManager.h */; };
@@ -56,6 +58,8 @@
 		528DA5EF205F82430063E2FC /* TKQQPluginConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKQQPluginConfig.m; sourceTree = "<group>"; };
 		528DA5F3206003CC0063E2FC /* TKHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKHelper.h; sourceTree = "<group>"; };
 		528DA5F7206003CC0063E2FC /* TKHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKHelper.m; sourceTree = "<group>"; };
+		529184C12126573C00FE4B57 /* NSDate+Action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Action.m"; sourceTree = "<group>"; };
+		529184C22126573C00FE4B57 /* NSDate+Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Action.h"; sourceTree = "<group>"; };
 		529F91DA206BCF680026430E /* TKWebServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKWebServerManager.m; sourceTree = "<group>"; };
 		529F91DB206BCF680026430E /* TKWebServerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKWebServerManager.h; sourceTree = "<group>"; };
 		529F91DE206BF0550026430E /* TKMsgManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKMsgManager.h; sourceTree = "<group>"; };
@@ -235,6 +239,8 @@
 				52E3A485206AAD390048C592 /* NSButton+Action.m */,
 				52E3A486206AAD390048C592 /* NSTextField+Action.h */,
 				52E3A48A206AAD390048C592 /* NSTextField+Action.m */,
+				529184C22126573C00FE4B57 /* NSDate+Action.h */,
+				529184C12126573C00FE4B57 /* NSDate+Action.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -276,6 +282,7 @@
 				52E3A48E206AAD390048C592 /* NSTextField+Action.h in Headers */,
 				528DA5E0205F80870063E2FC /* QQ+hook.h in Headers */,
 				529F91DD206BCF680026430E /* TKWebServerManager.h in Headers */,
+				529184C42126573C00FE4B57 /* NSDate+Action.h in Headers */,
 				528DA5FB206003CD0063E2FC /* TKHelper.h in Headers */,
 				52E3A45F206AABF00048C592 /* TKAutoReplyModel.h in Headers */,
 			);
@@ -401,6 +408,7 @@
 			files = (
 				52E3A480206AAD020048C592 /* TKAutoReplyCell.m in Sources */,
 				52E3A470206AACDF0048C592 /* TKAutoReplyWindowController.m in Sources */,
+				529184C32126573C00FE4B57 /* NSDate+Action.m in Sources */,
 				52E3A48D206AAD390048C592 /* NSButton+Action.m in Sources */,
 				52E3A47D206AAD020048C592 /* TKAutoReplyContentView.m in Sources */,
 				52E3A460206AABF00048C592 /* TKAutoReplyModel.m in Sources */,
