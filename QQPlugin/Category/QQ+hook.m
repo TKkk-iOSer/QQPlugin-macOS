@@ -123,7 +123,8 @@ static char tkAutoReplyWindowControllerKey;         //  自动回复窗口的关
  @param msgModel 接收的消息
  */
 - (void)autoReplyWithMsg:(BHMessageModel *)msgModel {
-    if (msgModel.msgType != 1024) return;
+    if (msgModel.msgType != 1024 || msgModel.isSelfSend) return;
+    
     NSDate *now = [NSDate date];
     NSTimeInterval nowTime = [now timeIntervalSince1970];
     NSTimeInterval receiveTime = [msgModel time];
