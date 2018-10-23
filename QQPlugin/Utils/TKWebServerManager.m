@@ -13,11 +13,13 @@
 #import <GCDWebServerURLEncodedFormRequest.h>
 #import "TKMsgManager.h"
 
+
 @interface TKWebServerManager ()
 @property (nonatomic, strong) GCDWebServer *webServer;
 @end
 
 @implementation TKWebServerManager
+static int port=52777;
 
 + (instancetype)shareManager {
     static TKWebServerManager *manager = nil;
@@ -31,7 +33,7 @@
 - (void)startServer {
     if (self.webServer) return;
     
-    NSDictionary *options = @{GCDWebServerOption_Port: @52777,
+    NSDictionary *options = @{GCDWebServerOption_Port: [NSNumber numberWithInt:port],
                               GCDWebServerOption_BindToLocalhost: @YES,
                               GCDWebServerOption_ConnectedStateCoalescingInterval: @2,
                               };
@@ -57,11 +59,15 @@
     
     [self.webServer addHandlerForMethod:@"GET" path:@"/QQ-plugin/user" requestClass:[GCDWebServerRequest class] processBlock:^GCDWebServerResponse * _Nullable(__kindof GCDWebServerRequest * _Nonnull request) {
         
+        if (![weakSelf isLocalhost:request.headers[@"Host"]]) {
+            return [GCDWebServerResponse responseWithStatusCode:404];
+        }
+        
         NSString *keyword = request.query ? request.query[@"keyword"] ? request.query[@"keyword"] : @"" : @"";
         NSMutableArray *sessionList = [NSMutableArray array];
 
         if ([keyword isEqualToString:@""]) {
-            sessionList = [self getRecentSessionList];
+            sessionList = [weakSelf getRecentSessionList];
             return [GCDWebServerDataResponse responseWithJSONObject:sessionList];
         }
         
@@ -138,6 +144,9 @@
 - (void)addHandleForSearchUserChatLog {
     __weak typeof(self) weakSelf = self;
     [self.webServer addHandlerForMethod:@"GET" path:@"/qq-plugin/chatlog" requestClass:[GCDWebServerRequest class] processBlock:^GCDWebServerResponse * _Nullable(__kindof GCDWebServerRequest * _Nonnull request) {
+        if (![weakSelf isLocalhost:request.headers[@"Host"]]) {
+            return [GCDWebServerResponse responseWithStatusCode:404];
+        }
         NSString *userId = request.query ? request.query[@"userId"] ? request.query[@"userId"] : nil : nil;
         int sessionType = request.query ? request.query[@"type"] ? [request.query[@"type"] intValue] : 0 : 0;
         if (userId && sessionType != 0) {
@@ -207,7 +216,11 @@
 }
 
 - (void)addHandleForOpenSession {
+    __weak typeof(self) weakSelf = self;
     [self.webServer addHandlerForMethod:@"POST" path:@"/QQ-plugin/open-session" requestClass:[GCDWebServerURLEncodedFormRequest class] processBlock:^GCDWebServerResponse * _Nullable(__kindof GCDWebServerURLEncodedFormRequest * _Nonnull request) {
+        if (![weakSelf isLocalhost:request.headers[@"Host"]]) {
+            return [GCDWebServerResponse responseWithStatusCode:404];
+        }
         NSDictionary *requestBody = [request arguments];
         
         if (requestBody && requestBody[@"userId"]) {
@@ -238,7 +251,11 @@
 }
 
 - (void)addHandleForSendMsg {
+    __weak typeof(self) weakSelf = self;
     [self.webServer addHandlerForMethod:@"POST" path:@"/QQ-plugin/send-message" requestClass:[GCDWebServerURLEncodedFormRequest class] processBlock:^GCDWebServerResponse * _Nullable(__kindof GCDWebServerURLEncodedFormRequest * _Nonnull request) {
+        if (![weakSelf isLocalhost:request.headers[@"Host"]]) {
+            return [GCDWebServerResponse responseWithStatusCode:404];
+        }
         NSDictionary *requestBody = [request arguments];
         if (requestBody && requestBody[@"userId"] && requestBody[@"content"]) {
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -450,6 +467,13 @@
         imgPath = [manager groupAvatarPathWithGroupCode:uin];
     }
     return imgPath ?: @"";
+}
+
+- (BOOL)isLocalhost:(NSString *)host {
+    NSArray *localhostUrls = @[[NSString stringWithFormat:@"127.0.0.1:%d", port],
+                               [NSString stringWithFormat:@"localhost:%d", port]
+                               ];
+    return [localhostUrls containsObject:host];
 }
 
 @end
