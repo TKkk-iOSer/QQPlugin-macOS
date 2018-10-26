@@ -11,6 +11,7 @@
 #import "TKAutoReplyModel.h"
 
 static NSString * const kTKPreventRevokeEnableKey = @"kTKPreventRevokeEnableKey";
+static NSString * const kTKAlfredEnableKey = @"kTKAlfredEnableKey";
 static NSString * const kTKQQResourcesPath = @"/Applications/QQ.app/Contents/MacOS/QQPlugin.framework/Resources/";
 
 @interface TKQQPluginConfig ()
@@ -32,6 +33,7 @@ static NSString * const kTKQQResourcesPath = @"/Applications/QQ.app/Contents/Mac
     self = [super init];
     if (self) {
         _preventRevokeEnable = [[NSUserDefaults standardUserDefaults] boolForKey:kTKPreventRevokeEnableKey];
+        _alfredEnable = [[NSUserDefaults standardUserDefaults] boolForKey:kTKAlfredEnableKey];
     }
     return self;
 }
@@ -42,6 +44,11 @@ static NSString * const kTKQQResourcesPath = @"/Applications/QQ.app/Contents/Mac
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
+- (void)setAlfredEnable:(BOOL)alfredEnable {
+    _alfredEnable = alfredEnable;
+    [[NSUserDefaults standardUserDefaults] setBool:alfredEnable forKey:kTKAlfredEnableKey];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
 
 #pragma mark - 自动回复
 - (NSArray *)autoReplyModels {

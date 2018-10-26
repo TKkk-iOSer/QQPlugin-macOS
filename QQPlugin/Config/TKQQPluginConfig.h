@@ -11,6 +11,7 @@
 @interface TKQQPluginConfig : NSObject
 
 @property (nonatomic, assign) BOOL preventRevokeEnable;                 /**<    是否开启防撤回    */
+@property (nonatomic, assign) BOOL alfredEnable;                        /**<    是否开启Alfred   */  
 @property (nonatomic, copy) NSMutableArray *autoReplyModels;            /**<    自动回复的数组    */
 
 + (instancetype)sharedConfig;

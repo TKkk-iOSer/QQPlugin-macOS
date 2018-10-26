@@ -107,7 +107,9 @@ static char tkAutoReplyWindowControllerKey;         //  自动回复窗口的关
 - (void)hook_notifyLoginWithAccount:(id)arg1 resultCode:(long long)arg2 userInfo:(id)arg3 {
     [self hook_notifyLoginWithAccount:arg1 resultCode:arg2 userInfo:arg3];
     
-    [[TKWebServerManager shareManager] startServer];
+    if ([[TKQQPluginConfig sharedConfig] alfredEnable]) {
+        [[TKWebServerManager shareManager] startServer];
+    }
 }
 
 - (void)hook_notifyForceLogoutWithAccount:(id)arg1 type:(long long)arg2 tips:(id)arg3 {
@@ -239,9 +241,14 @@ static char tkAutoReplyWindowControllerKey;         //  自动回复窗口的关
     //        自动回复
     NSMenuItem *autoReplyItem = [[NSMenuItem alloc] initWithTitle:@"自动回复设置" action:@selector(onAutoReply:) keyEquivalent:@"K"];
     
+    //        开启 alfred
+    NSMenuItem *enableAlfredItem = [[NSMenuItem alloc] initWithTitle:@"开启 alfred" action:@selector(onEnableAlfred:) keyEquivalent:@""];
+    enableAlfredItem.state = [[TKQQPluginConfig sharedConfig] alfredEnable];
+    
     NSMenu *subMenu = [[NSMenu alloc] initWithTitle:@"QQ小助手"];
     [subMenu addItem:preventRevokeItem];
     [subMenu addItem:autoReplyItem];
+    [subMenu addItem:enableAlfredItem];
     
     NSMenuItem *menuItem = [[NSMenuItem alloc] init];
     [menuItem setTitle:@"QQ小助手"];
@@ -277,6 +284,16 @@ static char tkAutoReplyWindowControllerKey;         //  自动回复窗口的关
     [autoReplyWC showWindow:autoReplyWC];
     [autoReplyWC.window center];
     [autoReplyWC.window makeKeyWindow];
+}
+
+- (void)onEnableAlfred:(NSMenuItem *)item {
+    item.state = !item.state;
+    if (item.state) {
+        [[TKWebServerManager shareManager] startServer];
+    } else {
+        [[TKWebServerManager shareManager] endServer];
+    }
+    [[TKQQPluginConfig sharedConfig] setAlfredEnable:item.state];
 }
 
 #pragma mark - 替换 NSSearchPathForDirectoriesInDomains & NSHomeDirectory

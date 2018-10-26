@@ -16,7 +16,8 @@ QQ 小助手
 ---
 
 ### 更新日志
-修复安全漏洞(2018-10-23)
+* 新增 alfred 开关(2018-10-26)   
+* 修复安全漏洞(2018-10-23)
 
 ---
 ### 安装
@@ -86,7 +87,9 @@ QQ 小助手
 
 ---
 
-#### 听说你想请我喝下午茶？😏
- 
-<img src="http://upload-images.jianshu.io/upload_images/965383-cbc86dc1d75a6242.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" height="250" hspace="50"/>&nbsp;&nbsp;&nbsp;<img src="http://upload-images.jianshu.io/upload_images/965383-76a1c7c91b987e1a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" height="250" hspace="50"  />
+### 免责声明
+* 使用插件有风险，使用需谨慎。
+* 本项目不可用于商业和个人其他意图。若使用不当，请使用者自行承担。
+* 如有侵权，请联系本人。tkk.ioser@gmail.com
+
 
